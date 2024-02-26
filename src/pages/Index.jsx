@@ -3,8 +3,8 @@ import { Box, Button, Container, FormControl, FormLabel, Input, VStack, Heading,
 import { FaLock, FaUserAlt } from "react-icons/fa";
 
 const Index = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("Tendo");
+  const [password, setPassword] = useState("1234");
   const [loginError, setLoginError] = useState(false);
 
   const handleSubmit = (event) => {
@@ -28,9 +28,9 @@ const Index = () => {
           )}
           <form onSubmit={handleSubmit}>
             <VStack spacing={4}>
-              <FormControl id="email" isRequired>
-                <FormLabel>Email address</FormLabel>
-                <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" size="lg" />
+              <FormControl id="username" isRequired>
+                <FormLabel>Username</FormLabel>
+                <Input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter your username" size="lg" />
               </FormControl>
               <FormControl id="password" isRequired>
                 <FormLabel>Password</FormLabel>
